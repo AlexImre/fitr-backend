@@ -5,6 +5,7 @@ const session = require('express-session');
 var passport = require('passport');
 var crypto = require('crypto');
 var routes = require('./routes');
+const cors = require('cors');
 const connection = require('./config/database');
 const morgan = require('morgan');
 
@@ -20,6 +21,7 @@ require('./config/passport');
 var app = express();
 app.use(express.json());
 app.use(morgan('tiny'));
+app.use(cors());
 app.use(express.urlencoded({extended: true}));
 app.use(passport.initialize());
 app.use(passport.session());
