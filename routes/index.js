@@ -82,7 +82,7 @@ router.post('/addEvent', async (req, res, next) => {
 
 router.get('/auth', isAuth, (req, res, next) => {
     console.log('You made it to auth route');
-    // res.send();
+    console.log(res);
 });
 
 router.get('/allEvents', isAuth, async (req, res, next) => {
