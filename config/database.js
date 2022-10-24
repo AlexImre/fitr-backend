@@ -1,12 +1,13 @@
-const mongoose = require('mongoose');
-
 require('dotenv').config();
+const mongoose = require('mongoose');
 
 /**
  * -------------- DATABASE ----------------
  */
 
-const conn = String(process.env.DB_STRING);
+const conn = process.env.DB_STRING;
+// console.log(typeof conn);
+// console.log(conn);
 const connection = mongoose.createConnection(conn, {
     useNewUrlParser: true,
     useUnifiedTopology: true

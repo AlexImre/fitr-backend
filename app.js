@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
@@ -16,7 +17,6 @@ require('./config/passport');
  * -------------- GENERAL SETUP ----------------
  */
 
-require('dotenv').config();
 var app = express();
 app.use(express.json());
 app.use(morgan('tiny'));
