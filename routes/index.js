@@ -9,6 +9,10 @@ const { isAuth, isAdmin } = require('./authMiddleware');
  * -------------- POST ROUTES ----------------
  */
 
+router.post('/test', (req, res, next) => {
+    res.json('well done');
+})
+
 router.post('/login', 
     passport.authenticate('local'), 
     (req, res, next) => {
