@@ -9,7 +9,7 @@ const { isAuth, isAdmin } = require('./authMiddleware');
  * -------------- POST ROUTES ----------------
  */
 
-router.post('/test', (req, res, next) => {
+router.get('/test', (req, res, next) => {
     res.json('well done');
 })
 
